@@ -1,0 +1,37 @@
+{
+  "app": {
+    "name": "Dino Landia",
+    "tagline": "Una enciclopedia juguetona de dinosaurios para niños curiosos"
+  },
+  "nav": {
+    "explore": "Explorar",
+    "timeline": "Línea de tiempo",
+    "quiz": "Quiz de Dinos",
+    "collection": "Mi Colección",
+    "about": "Acerca de"
+  },
+  "language": {
+    "switch": "Idioma",
+    "en": "English",
+    "es": "Español"
+  },
+  "home": {
+    "heroTitle": "¡Bienvenidos a Dino Landia!",
+    "heroSubtitle": "Descubre dinosaurios increíbles de hace millones de años. ¡Aprende, explora y diviértete!",
+    "ctaExplore": "Comenzar a Explorar",
+    "ctaQuiz": "Hacer el Quiz"
+  },
+  "common": {
+    "loading": "Cargando...",
+    "back": "Volver",
+    "close": "Cerrar",
+    "favorite": "Agregar a mi colección",
+    "unfavorite": "Quitar de mi colección",
+    "listen": "Escuchar",
+    "compareSize": "Comparar tamaños"
+  },
+  "errors": {
+    "notFound": "Página no encontrada",
+    "somethingWrong": "Algo salió mal"
+  }
+}

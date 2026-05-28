@@ -1,0 +1,37 @@
+{
+  "app": {
+    "name": "Dino Landia",
+    "tagline": "A playful dinosaur encyclopedia for curious kids"
+  },
+  "nav": {
+    "explore": "Explore",
+    "timeline": "Timeline",
+    "quiz": "Dino Quiz",
+    "collection": "My Collection",
+    "about": "About"
+  },
+  "language": {
+    "switch": "Language",
+    "en": "English",
+    "es": "Español"
+  },
+  "home": {
+    "heroTitle": "Welcome to Dino Landia!",
+    "heroSubtitle": "Discover amazing dinosaurs from millions of years ago. Learn, explore, and have fun!",
+    "ctaExplore": "Start Exploring",
+    "ctaQuiz": "Take the Quiz"
+  },
+  "common": {
+    "loading": "Loading...",
+    "back": "Back",
+    "close": "Close",
+    "favorite": "Add to collection",
+    "unfavorite": "Remove from collection",
+    "listen": "Listen",
+    "compareSize": "Compare sizes"
+  },
+  "errors": {
+    "notFound": "Page not found",
+    "somethingWrong": "Something went wrong"
+  }
+}
