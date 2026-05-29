@@ -45,6 +45,11 @@ const dinosaurs: Dinosaur[] = [
     lengthMeters: 12.3,
     heightMeters: 3.7,
     weightKg: 8000,
+    media: {
+      heroImage: "/dinosaurs/t-rex/hero.jpg",
+      cardImage: "/dinosaurs/t-rex/card.jpg",
+      video: "/dinosaurs/t-rex/video.mp4",
+    },
     content: {
       en: {
         name: "Tyrannosaurus rex",
@@ -87,6 +92,11 @@ const dinosaurs: Dinosaur[] = [
     lengthMeters: 9,
     heightMeters: 3,
     weightKg: 8000,
+    media: {
+      heroImage: "/dinosaurs/triceratops/hero.jpg",
+      cardImage: "/dinosaurs/triceratops/card.jpg",
+      video: "/dinosaurs/triceratops/video.mp4",
+    },
     content: {
       en: {
         name: "Triceratops",
@@ -129,6 +139,11 @@ const dinosaurs: Dinosaur[] = [
     lengthMeters: 9,
     heightMeters: 4,
     weightKg: 5000,
+    media: {
+      heroImage: "/dinosaurs/stegosaurus/hero.jpg",
+      cardImage: "/dinosaurs/stegosaurus/card.jpg",
+      video: "/dinosaurs/stegosaurus/video.mp4",
+    },
     content: {
       en: {
         name: "Stegosaurus",
@@ -171,6 +186,11 @@ const dinosaurs: Dinosaur[] = [
     lengthMeters: 25,
     heightMeters: 13,
     weightKg: 35000,
+    media: {
+      heroImage: "/dinosaurs/brachiosaurus/hero.jpg",
+      cardImage: "/dinosaurs/brachiosaurus/card.jpg",
+      video: "/dinosaurs/brachiosaurus/video.mp4",
+    },
     content: {
       en: {
         name: "Brachiosaurus",
@@ -213,6 +233,11 @@ const dinosaurs: Dinosaur[] = [
     lengthMeters: 2,
     heightMeters: 0.5,
     weightKg: 20,
+    media: {
+      heroImage: "/dinosaurs/velociraptor/hero.jpg",
+      cardImage: "/dinosaurs/velociraptor/card.jpg",
+      video: "/dinosaurs/velociraptor/video.mp4",
+    },
     content: {
       en: {
         name: "Velociraptor",
@@ -255,6 +280,11 @@ const dinosaurs: Dinosaur[] = [
     lengthMeters: 8,
     heightMeters: 1.7,
     weightKg: 6000,
+    media: {
+      heroImage: "/dinosaurs/ankylosaurus/hero.jpg",
+      cardImage: "/dinosaurs/ankylosaurus/card.jpg",
+      video: "/dinosaurs/ankylosaurus/video.mp4",
+    },
     content: {
       en: {
         name: "Ankylosaurus",
@@ -297,6 +327,11 @@ const dinosaurs: Dinosaur[] = [
     lengthMeters: 10,
     heightMeters: 4,
     weightKg: 2500,
+    media: {
+      heroImage: "/dinosaurs/parasaurolophus/hero.jpg",
+      cardImage: "/dinosaurs/parasaurolophus/card.jpg",
+      video: "/dinosaurs/parasaurolophus/video.mp4",
+    },
     content: {
       en: {
         name: "Parasaurolophus",

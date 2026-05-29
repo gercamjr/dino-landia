@@ -13,7 +13,6 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 
 export default function HomePage() {
   const t = useTranslations("home");
-  const tCommon = useTranslations("common");
 
   return (
     <div className="relative overflow-hidden">

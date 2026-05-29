@@ -10,7 +10,7 @@ export function LocaleSwitcher() {
   const pathname = usePathname();
 
   const onSelectChange = (newLocale: string) => {
-    router.replace(pathname, { locale: newLocale as any });
+    router.replace(pathname, { locale: newLocale as (typeof locales)[number] });
   };
 
   return (
@@ -23,7 +23,7 @@ export function LocaleSwitcher() {
       >
         {locales.map((l) => (
           <option key={l} value={l}>
-            {l === "en" ? "🇬🇧 English" : "🇪🇸 Español"}
+            {l === "en" ? "🇺🇸 English" : "🇪🇸 Español"}
           </option>
         ))}
       </select>
