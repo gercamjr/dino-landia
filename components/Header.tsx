@@ -1,11 +1,14 @@
 "use client";
 
+import { useState } from "react";
 import { Link } from "@/i18n/routing";
 import { useTranslations } from "next-intl";
 import { LocaleSwitcher } from "./LocaleSwitcher";
+import { motion, AnimatePresence } from "framer-motion";
 
 export function Header() {
   const t = useTranslations("nav");
+  const [isOpen, setIsOpen] = useState(false);
 
   const navItems = [
     { href: "/explore", label: t("explore") },
@@ -25,6 +28,7 @@ export function Header() {
           <span>Dino Landia</span>
         </Link>
 
+        {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center gap-8 text-sm font-medium">
           {navItems.map((item) => (
             <Link
@@ -37,11 +41,52 @@ export function Header() {
           ))}
         </nav>
 
+        {/* Right side controls */}
         <div className="flex items-center gap-4">
           <LocaleSwitcher />
-          {/* Mobile nav will be added later */}
+
+          {/* Mobile Hamburger Button */}
+          <button
+            onClick={() => setIsOpen(!isOpen)}
+            className="md:hidden flex h-10 w-10 items-center justify-center rounded-lg text-[#4A4038] hover:bg-[#EDE6D9] transition"
+            aria-label="Toggle menu"
+          >
+            <div className="space-y-1.5">
+              <span className={`block h-0.5 w-6 bg-current transition ${isOpen ? 'rotate-45 translate-y-2' : ''}`} />
+              <span className={`block h-0.5 w-6 bg-current transition ${isOpen ? 'opacity-0' : ''}`} />
+              <span className={`block h-0.5 w-6 bg-current transition ${isOpen ? '-rotate-45 -translate-y-2' : ''}`} />
+            </div>
+          </button>
         </div>
       </div>
+
+      {/* Mobile Menu Dropdown */}
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: "auto" }}
+            exit={{ opacity: 0, height: 0 }}
+            className="md:hidden border-t border-[#EDE6D9] bg-[#F8F5F0]"
+          >
+            <nav className="flex flex-col px-6 py-2 text-lg font-medium">
+              {navItems.map((item) => (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  onClick={() => setIsOpen(false)}
+                  className="py-4 text-[#2C2522] border-b border-[#EDE6D9] last:border-none active:bg-[#EDE6D9] transition"
+                >
+                  {item.label}
+                </Link>
+              ))}
+              <div className="pt-3 pb-1">
+                <LocaleSwitcher />
+              </div>
+            </nav>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </header>
   );
 }

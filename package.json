@@ -6,7 +6,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "vercel:deploy": "vercel",
+    "vercel:preview": "vercel --prod=false",
+    "vercel:prod": "vercel --prod"
   },
   "dependencies": {
     "framer-motion": "^12.40.0",

@@ -110,6 +110,32 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 
 ## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+This project is optimized for [Vercel](https://vercel.com).
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### One-Click Deploy
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/gercamjr/dino-landia)
+
+### Manual Setup + Preview Environments
+
+1. Install Vercel CLI:
+   ```bash
+   npm i -g vercel
+   ```
+
+2. Deploy:
+   ```bash
+   vercel
+   ```
+
+3. **For Preview Environments (recommended)**:
+   - Go to [vercel.com](https://vercel.com) and import this GitHub repository.
+   - Vercel will automatically create a **unique preview URL for every Pull Request**.
+   - This gives you instant previews for testing changes with real bilingual content and assets.
+
+The `vercel.json` in this repo configures the project for optimal Next.js + i18n performance on Vercel.
+
+**Production URL** (after first deploy): Will be shown in the Vercel dashboard.
+
+## Environment Variables
+
+No environment variables are required for basic functionality. All dinosaur content and media are included in the repository.
