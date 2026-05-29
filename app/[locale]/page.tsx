@@ -1,6 +1,10 @@
 import Link from "next/link";
 import { useTranslations } from "next-intl";
 import { getTranslations } from "next-intl/server";
+import { getAllDinosaurs } from "@/data/dinosaurs";
+import { DinosaurCard } from "@/components/DinosaurCard";
+
+const featuredDinosaurs = getAllDinosaurs().slice(0, 4); // First 4 for featured
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
@@ -63,20 +67,56 @@ export default function HomePage() {
         </div>
       </div>
 
-      {/* Quick Preview */}
-      <div className="mx-auto max-w-5xl px-6 py-16 text-center">
-        <h2 className="text-3xl font-semibold tracking-tight mb-4 text-[#2C2522]">
-          Ready to start your adventure?
-        </h2>
-        <p className="text-lg text-[#5C5146] mb-8">
-          Jump into the dinosaur world with beautiful illustrations and real facts made for kids.
-        </p>
-        <Link
-          href="/explore"
-          className="inline-flex items-center justify-center rounded-full bg-[#2C2522] px-6 py-3 text-white font-medium hover:bg-black transition-colors"
-        >
-          Explore the Dinosaurs →
-        </Link>
+      {/* Featured Dinosaurs */}
+      <div className="bg-white border-t border-[#EDE6D9] py-16">
+        <div className="mx-auto max-w-6xl px-6">
+          <div className="flex items-end justify-between mb-8">
+            <div>
+              <h2 className="text-3xl font-semibold tracking-tight text-[#2C2522]">
+                Meet Some Dinosaurs
+              </h2>
+              <p className="text-[#5C5146] mt-1">Click any card to learn more</p>
+            </div>
+            <Link href="/explore" className="hidden md:block text-[#C17E4A] font-medium hover:underline">
+              See all →
+            </Link>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {featuredDinosaurs.map((dino) => (
+              <DinosaurCard key={dino.id} dinosaur={dino} />
+            ))}
+          </div>
+
+          <div className="mt-8 text-center md:hidden">
+            <Link href="/explore" className="text-[#C17E4A] font-medium hover:underline">
+              See all dinosaurs →
+            </Link>
+          </div>
+        </div>
+      </div>
+
+      {/* Quick Links */}
+      <div className="mx-auto max-w-5xl px-6 py-16">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <Link href="/timeline" className="group rounded-3xl bg-white p-8 ring-1 ring-[#EDE6D9] hover:ring-[#C17E4A] transition">
+            <div className="text-4xl mb-4">⏳</div>
+            <div className="font-semibold text-2xl mb-2 group-hover:text-[#C17E4A]">Timeline</div>
+            <p className="text-[#5C5146]">See when each dinosaur lived millions of years ago.</p>
+          </Link>
+
+          <Link href="/quiz" className="group rounded-3xl bg-white p-8 ring-1 ring-[#EDE6D9] hover:ring-[#C17E4A] transition">
+            <div className="text-4xl mb-4">🎯</div>
+            <div className="font-semibold text-2xl mb-2 group-hover:text-[#C17E4A]">Dino Quiz</div>
+            <p className="text-[#5C5146]">Test your dinosaur knowledge with our fun quiz for kids.</p>
+          </Link>
+
+          <Link href="/collection" className="group rounded-3xl bg-white p-8 ring-1 ring-[#EDE6D9] hover:ring-[#C17E4A] transition">
+            <div className="text-4xl mb-4">❤️</div>
+            <div className="font-semibold text-2xl mb-2 group-hover:text-[#C17E4A]">My Collection</div>
+            <p className="text-[#5C5146]">Save your favorite dinosaurs and build your own collection.</p>
+          </Link>
+        </div>
       </div>
     </div>
   );

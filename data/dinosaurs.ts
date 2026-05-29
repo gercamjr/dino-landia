@@ -14,6 +14,13 @@ export interface DinosaurContent {
   pronunciation: string;
 }
 
+export interface DinosaurMedia {
+  heroImage: string;
+  cardImage: string;
+  video: string;
+  comparisonImage?: string;
+}
+
 export interface Dinosaur {
   id: string;
   slug: string;
@@ -23,6 +30,7 @@ export interface Dinosaur {
   lengthMeters: number;
   heightMeters: number;
   weightKg: number;
+  media: DinosaurMedia;
   content: Record<Locale, DinosaurContent>;
 }
 

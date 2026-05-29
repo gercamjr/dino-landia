@@ -33,5 +33,10 @@
   "errors": {
     "notFound": "Página no encontrada",
     "somethingWrong": "Algo salió mal"
+  },
+  "explore": {
+    "title": "Explora los Dinosaurios",
+    "subtitle": "Descubre criaturas increíbles que caminaron por la Tierra hace millones de años.",
+    "searchPlaceholder": "Buscar dinosaurios..."
   }
 }
